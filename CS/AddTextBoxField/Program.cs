@@ -21,7 +21,7 @@ namespace AddTextBoxField {
 
         static void DrawTextBoxField(PdfGraphics graphics) {
 
-            // Create a text box field and specify its location on the page using a RectangleF object.
+            // Create a text box field and specify its location.
             PdfGraphicsAcroFormTextBoxField textBox = new PdfGraphicsAcroFormTextBoxField("text box", new RectangleF(0, 10, 200, 30));
 
             // Specify text box properties.
@@ -30,7 +30,7 @@ namespace AddTextBoxField {
             textBox.Appearance.FontSize = 12;
             textBox.Appearance.BackgroundColor = Color.AliceBlue;          
           
-            // Add the field to graphics.
+            // Add the field as graphics content.
             graphics.AddFormField(textBox);
         }
     }
