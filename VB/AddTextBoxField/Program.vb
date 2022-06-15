@@ -19,14 +19,14 @@ Namespace AddTextBoxField
         End Sub
 
         Private Shared Sub DrawTextBoxField(ByVal graphics As PdfGraphics)
-            ' Create a text box field and specify its location.
+            ' Create a text box field and specify its location on the page using a RectangleF object.
             Dim textBox As PdfGraphicsAcroFormTextBoxField = New PdfGraphicsAcroFormTextBoxField("text box", New RectangleF(0, 10, 200, 30))
             ' Specify text box properties.
             textBox.Text = "Text Box"
             textBox.TextAlignment = PdfAcroFormStringAlignment.Near
             textBox.Appearance.FontSize = 12
             textBox.Appearance.BackgroundColor = Color.AliceBlue
-            ' Add the field as graphics content.
+            ' Add the field to graphics.
             graphics.AddFormField(textBox)
         End Sub
     End Class
